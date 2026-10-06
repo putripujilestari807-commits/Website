@@ -1,24 +1,27 @@
 # Website
 Website resmi Cece | Daily•StudioAI
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Cece | Daily•StudioAI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Cece | Daily•StudioAI</title>
   <meta name="description" content="Produk digital, inspirasi, dan karya kreatif pilihan Cece.">
-
-  <style>
+  <meta name="theme-color" content="#d99186">  <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background: #fff8f5;
+      background:
+        radial-gradient(circle at top left, #ffe9e2 0, transparent 32%),
+        radial-gradient(circle at bottom right, #f5e2d6 0, transparent 30%),
+        #fff8f5;
       color: #4a3732;
       min-height: 100vh;
     }
@@ -31,16 +34,28 @@ Website resmi Cece | Daily•StudioAI
     }
 
     .profile {
-      width: 90px;
-      height: 90px;
+      width: 96px;
+      height: 96px;
       margin: 0 auto 18px;
       border-radius: 50%;
       background: linear-gradient(135deg, #f5c9c2, #ead7c8);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 38px;
-      box-shadow: 0 8px 25px rgba(100, 60, 50, .12);
+      font-size: 40px;
+      box-shadow: 0 10px 30px rgba(100, 60, 50, .15);
+      border: 4px solid rgba(255,255,255,.8);
+    }
+
+    .mini-label {
+      display: inline-block;
+      background: rgba(255,255,255,.75);
+      border: 1px solid #eadbd5;
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+      color: #9a6e64;
+      margin-bottom: 13px;
     }
 
     h1 {
@@ -51,7 +66,7 @@ Website resmi Cece | Daily•StudioAI
 
     .tagline {
       font-size: 15px;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #806c65;
       margin-bottom: 28px;
     }
@@ -68,31 +83,38 @@ Website resmi Cece | Daily•StudioAI
       text-decoration: none;
       font-weight: bold;
       font-size: 15px;
-      background: white;
+      background: rgba(255,255,255,.9);
       color: #5b4038;
       border: 1px solid #eadbd5;
       box-shadow: 0 5px 18px rgba(100, 60, 50, .07);
-      transition: .2s;
+      transition: .25s ease;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(100, 60, 50, .12);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(100, 60, 50, .13);
     }
 
     .primary {
-      background: #d99186;
+      background: linear-gradient(135deg, #d99186, #c9796d);
       color: white;
       border: none;
     }
 
     .section {
-      margin-top: 38px;
+      margin-top: 40px;
     }
 
     .section h2 {
       font-size: 19px;
       margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: #8e7770;
+      margin-top: -8px;
+      margin-bottom: 18px;
     }
 
     .cards {
@@ -102,21 +124,73 @@ Website resmi Cece | Daily•StudioAI
     }
 
     .card {
-      background: white;
-      padding: 20px 12px;
+      background: rgba(255,255,255,.88);
+      padding: 21px 12px;
       border-radius: 18px;
       border: 1px solid #eee0da;
       box-shadow: 0 5px 15px rgba(100, 60, 50, .05);
+      transition: .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
     }
 
     .card-icon {
-      font-size: 25px;
-      margin-bottom: 8px;
+      font-size: 27px;
+      margin-bottom: 9px;
     }
 
     .card-title {
       font-weight: bold;
       font-size: 14px;
+      margin-bottom: 6px;
+    }
+
+    .card-text {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #8a7771;
+    }
+
+    .about {
+      margin-top: 35px;
+      background: rgba(255,255,255,.78);
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid #eee0da;
+      text-align: left;
+      box-shadow: 0 5px 18px rgba(100,60,50,.05);
+    }
+
+    .about h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #806c65;
+    }
+
+    .social {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .social a {
+      text-decoration: none;
+      color: #6d5149;
+      background: white;
+      border: 1px solid #eadbd5;
+      padding: 9px 14px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
     }
 
     footer {
@@ -124,6 +198,10 @@ Website resmi Cece | Daily•StudioAI
       font-size: 12px;
       color: #9b8982;
       line-height: 1.7;
+    }
+
+    .heart {
+      color: #d99186;
     }
 
     @media (max-width: 380px) {
@@ -135,46 +213,124 @@ Website resmi Cece | Daily•StudioAI
         grid-template-columns: 1fr;
       }
     }
-  </style>
-</head>
+  </style></head><body>  <main class="container"><div class="profile">✨</div>
 
-<body>
+<div class="mini-label">
+  ✨ Welcome to my creative space
+</div>
 
-  <main class="container">
+<h1>Cece | Daily•StudioAI</h1>
 
-    <div class="profile">✨</div>
+<p class="tagline">
+  Kreatif digital dengan sentuhan AI ✨<br>
+  Temukan produk digital, inspirasi, dan karya pilihan Cece.
+</p>
 
-    <h1>Cece | Daily•StudioAI</h1>
+<div class="buttons">
 
-    <p class="tagline">
-      Kreatif digital dengan sentuhan AI ✨<br>
-      Temukan produk digital, inspirasi, dan karya pilihan Cece.
-    </p>
+  <a class="btn primary" href="#" target="_blank">
+    ✨ Lihat Produk & Rekomendasi
+  </a>
 
-    <div class="buttons">
+  <a class="btn"
+     href="https://wa.me/qr/FB5MEVRTAO7EK1"
+     target="_blank"
+     rel="noopener">
+    💬 Hubungi Cece via WhatsApp
+  </a>
 
-      <a class="btn primary" href="#" target="_blank">
-        ✨ Lihat Produk & Rekomendasi
-      </a>
+  <a class="btn" href="#" target="_blank">
+    🎁 Freebie / Bonus Gratis
+  </a>
 
-      <a class="btn" href="https://wa.me/qr/FB5MEVRTAO7EK1" target="_blank">
-        💬 Hubungi Cece via WhatsApp
-      </a>
+  <a class="btn" href="#" target="_blank">
+    🔗 Semua Link Cece
+  </a>
 
-      <a class="btn" href="#" target="_blank">
-        🎁 Freebie / Bonus Gratis
-      </a>
+</div>
 
-      <a class="btn" href="#" target="_blank">
-        🔗 Semua Link Cece
-      </a>
+<section class="section">
 
+  <h2>Yang Bisa Kamu Temukan 🌷</h2>
+
+  <p class="section-subtitle">
+    Pilihan konten dan karya digital dari Cece
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">💻</div>
+      <div class="card-title">Produk Digital</div>
+      <div class="card-text">
+        Koleksi digital yang praktis dan menarik.
+      </div>
     </div>
 
-    <section class="section">
+    <div class="card">
+      <div class="card-icon">✨</div>
+      <div class="card-title">AI Kreatif</div>
+      <div class="card-text">
+        Ide, inspirasi, dan karya kreatif dengan AI.
+      </div>
+    </div>
 
-      <h2>Yang Bisa Kamu Temukan 🌷</h2>
+    <div class="card">
+      <div class="card-icon">🎨</div>
+      <div class="card-title">Karya Cece</div>
+      <div class="card-text">
+        Konten visual dan berbagai karya pilihan.
+      </div>
+    </div>
 
-      <div class="cards">
+    <div class="card">
+      <div class="card-icon">🎁</div>
+      <div class="card-title">Freebie</div>
+      <div class="card-text">
+        Bonus dan hadiah digital untuk kamu.
+      </div>
+    </div>
 
-        <div class="
+  </div>
+
+</section>
+
+<section class="about">
+
+  <h2>Tentang Cece 🌸</h2>
+
+  <p>
+    Selamat datang di Daily•StudioAI.
+    Di sini Cece berbagi produk digital, inspirasi,
+    eksperimen AI, dan karya kreatif yang dibuat
+    dengan penuh cinta dan kreativitas.
+  </p>
+
+</section>
+
+<div class="social">
+
+  <a href="https://wa.me/qr/FB5MEVRTAO7EK1"
+     target="_blank"
+     rel="noopener">
+    💬 WhatsApp
+  </a>
+
+  <a href="#" target="_blank">
+    📱 Instagram
+  </a>
+
+  <a href="#" target="_blank">
+    🎵 TikTok
+  </a>
+
+</div>
+
+<footer>
+  Dibuat dengan <span class="heart">♥</span> oleh Cece
+  <br>
+  © 2026 Daily•StudioAI. All rights reserved.
+</footer>
+
+  </main></body>
+</html>
